@@ -1,4 +1,4 @@
-# Django 5.0+ 阿里云 OSS 存储
+# Django 5 阿里云 OSS 存储
 
 用于阿里云 OSS（对象存储服务）的 Django 存储后端。
 
