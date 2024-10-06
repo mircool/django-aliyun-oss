@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="django-aliyun-oss",  # 项目名称
+    name="django5-aliyun-oss",  # 项目名称
     version="1.0.2",  # 版本号
     author="Mircool",  # 作者名称
     # author_email="your.email@example.com",  # 作者邮箱
