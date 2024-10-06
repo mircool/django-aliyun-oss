@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: django-aliyun-oss
+Version: 1.0.0
+Summary: Django storage backend for Aliyun OSS
+Home-page: https://github.com/yourusername/django-aliyun-oss
+Author: Your Name
+Author-email: Your Name <your.email@example.com>
+Project-URL: Homepage, https://github.com/yourusername/django-aliyun-oss
+Project-URL: Issues, https://github.com/yourusername/django-aliyun-oss/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Django Aliyun OSS Storage
+
+Django storage backend for Aliyun OSS (Object Storage Service).
+
+## Installation
+
+```bash
+pip install django-aliyun-oss
+```
+
+## Configuration
+
+Add the following settings to your Django settings.py:
+
+```python
+ALIYUN_OSS = {
+    'ACCESS_KEY_ID': 'your-access-key-id',
+    'ACCESS_KEY_SECRET': 'your-access-key-secret',
+    'ENDPOINT': 'your-endpoint',
+    'BUCKET_NAME': 'your-bucket-name',
+    'URL_EXPIRE_SECONDS': 3600,  # Optional
+}
+
+# Set as default storage
+DEFAULT_FILE_STORAGE = 'django_aliyun_oss.storage.AliyunOSSStorage'
+
+# If you want to use it for static files too
+STORAGES = {
+    'default': {
+        'BACKEND': 'django_aliyun_oss.storage.AliyunOSSStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'django_aliyun_oss.storage.AliyunOSSStorage',
+    },
+}
+```
+
+## Usage
+
+```python
+from django.db import models
+
+class YourModel(models.Model):
+    file = models.FileField(upload_to='uploads/')
+    image = models.ImageField(upload_to='images/')
+```
+
+## Features
+
+- Compatible with Django 5.0+
+- Supports all basic file operations
+- Generates signed URLs for private buckets
+- Handles file deletion
+- Configurable upload paths
+- Supports static files storage
+
+## License
+
+MIT License
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
