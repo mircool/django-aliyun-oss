@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-pip install django-aliyun-oss
+pip install django5-aliyun-oss
 ```
 
 ## 配置
