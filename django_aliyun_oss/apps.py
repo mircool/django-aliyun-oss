@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class OssStorageConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'django_aliyun_oss'
+    name = 'oss_storage'
