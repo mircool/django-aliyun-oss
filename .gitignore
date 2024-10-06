@@ -3,3 +3,5 @@
 __pycache__
 dist
 django_project.egg-info/
+*.egg-info
+build
