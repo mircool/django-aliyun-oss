@@ -23,10 +23,13 @@ INSTALLED_APPS = [
 在您的 Django settings.py 中添加以下设置：
 
 ```python
-OSS_ACCESS_KEY_ID = '您的访问密钥ID'
-OSS_ACCESS_KEY_SECRET = '您的访问密钥密码'
-OSS_ENDPOINT = '您的终端节点'
-OSS_BUCKET_NAME = '您的存储桶名称'
+ALIYUN_OSS = {
+    'ACCESS_KEY_ID': '您的访问密钥ID',
+    'ACCESS_KEY_SECRET': '您的访问密钥密码',
+    'ENDPOINT': '您的终端节点',
+    'BUCKET_NAME': '您的存储桶名称',
+    'URL_EXPIRE_SECONDS': 3600,  # 可选，默认为3600
+}
 
 # 设置为默认存储器
 STORAGES = {
