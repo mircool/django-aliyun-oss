@@ -31,7 +31,7 @@ OSS_BUCKET_NAME = '您的存储桶名称'
 # 设置为默认存储器
 STORAGES = {
     'default': {
-        'BACKEND': 'django_aliyun_oss.storage.OSSStorage',
+        'BACKEND': 'django_aliyun_oss.storage.AliyunOSSStorage',
     },
     'staticfiles': {
         'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',

@@ -9,7 +9,7 @@ from django.core.files.storage import Storage
 from django.utils.deconstruct import deconstructible
 
 @deconstructible
-class OSSStorage(Storage):
+class AliyunOSSStorage(Storage):
     """
     Aliyun OSS Storage Backend for Django
     

@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django5-aliyun-oss",  # 项目名称
-    version="1.0.3",  # 版本号
+    version="1.0.4",  # 版本号
     author="Mircool",  # 作者名称
     # author_email="your.email@example.com",  # 作者邮箱
     description="Django storage backend for Aliyun OSS",  # 简短描述
