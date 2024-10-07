@@ -14,7 +14,7 @@ pip install django5-aliyun-oss
 ```python
 INSTALLED_APPS = [
     ...
-    'django_aliyun_oss',
+    'django5_aliyun_oss',
     ...
 ]
 ```
@@ -34,7 +34,7 @@ ALIYUN_OSS = {
 # 设置为默认存储器
 STORAGES = {
     'default': {
-        'BACKEND': 'django_aliyun_oss.storage.AliyunOSSStorage',
+        'BACKEND': 'django5_aliyun_oss.storage.AliyunOSSStorage',
     },
     'staticfiles': {
         'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
