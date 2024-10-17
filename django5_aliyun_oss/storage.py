@@ -29,12 +29,11 @@ class AliyunOSSStorage(Storage):
         self.endpoint = settings.ALIYUN_OSS.get('ENDPOINT')
         self.bucket_name = settings.ALIYUN_OSS.get('BUCKET_NAME')
         self.url_expire_seconds = settings.ALIYUN_OSS.get('URL_EXPIRE_SECONDS', 3600)
-        self.is_secure = settings.ALIYUN_OSS.get('IS_SECURE', True)
         
         # 创建 Auth 实例
         self.auth = oss2.Auth(self.access_key_id, self.access_key_secret)
         # 创建 Bucket 实例
-        self.bucket = oss2.Bucket(self.auth, self.endpoint, self.bucket_name, self.is_secure)
+        self.bucket = oss2.Bucket(self.auth, self.endpoint, self.bucket_name)
 
     def _get_key(self, name):
         """
