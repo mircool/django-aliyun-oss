@@ -29,6 +29,7 @@ ALIYUN_OSS = {
     'ENDPOINT': '您的终端节点',
     'BUCKET_NAME': '您的存储桶名称',
     'URL_EXPIRE_SECONDS': 3600,  # 可选，默认为3600
+    'IS_SECURE': True,  # URL是否使用HTTPS,可选
 }
 
 # 设置为默认存储器

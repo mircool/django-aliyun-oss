@@ -7,9 +7,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django5-aliyun-oss",  # 项目名称
-    version="1.0.8",  # 版本号
+    version="1.0.9",  # 版本号
     author="Mircool",  # 作者名称
-    description="Django storage backend for Aliyun OSS",  # 简短描述
+    description="Django5 storage backend for Aliyun OSS",  # 简短描述
     long_description=long_description,  # 长描述，通常来自README文件
     long_description_content_type="text/markdown",  # 长描述的格式，这里是Markdown
     url="https://github.com/mircool/django-aliyun-oss",  # 项目网址
