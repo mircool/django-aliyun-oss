@@ -56,7 +56,6 @@ class YourModel(models.Model):
 
 - 兼容 Django 5.0+
 - 支持所有基本文件操作
-- 为私有存储桶生成签名 URL
 - 处理文件删除
 - 可配置的上传路径
 - 支持静态文件存储

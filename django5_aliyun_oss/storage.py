@@ -77,8 +77,8 @@ class AliyunOSSStorage(Storage):
         生成文件的访问 URL
         """
         key = self._get_key(name)
-        # 生成带签名的 URL
-        return self.bucket.sign_url('GET', key, self.url_expire_seconds)
+        # 直接返回公开访问的 URL
+        return f'https://{self.bucket_name}.{self.endpoint}/{key}'
 
     def size(self, name):
         """
