@@ -24,7 +24,7 @@ twine==5.1.1
 typing_extensions==4.12.2
 urllib3==2.2.3
 zipp==3.20.2
-
+wheel==0.44.0
 oss2~=2.19.0
 setuptools~=68.2.0
 Django~=5.1.2
